@@ -2,3 +2,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.background-pattern {
+  @apply bg-primary;
+  opacity: 1;
+  background-image: radial-gradient(#f8ffeb 1.55px, #28464c 1.55px);
+  background-size: 16px 16px;
+}
