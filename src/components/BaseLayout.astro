@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import YangDevBRLogo from './header/YangDevBrLogo.astro';
 import ProfilePhoto from './header/ProfilePhoto.astro';
+import Footer from './footer.astro';
 ---
 
 <html lang='en'>
@@ -30,9 +31,10 @@ import ProfilePhoto from './header/ProfilePhoto.astro';
           </li>
         </ul>
       </nav>
-      <main class='w-full flex flex-col p-4'>
+      <main class='w-full flex flex-col flex-grow p-4'>
         <slot />
       </main>
+      <Footer/>
     </div>
   </body>
 </html>
