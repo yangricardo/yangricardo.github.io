@@ -4,8 +4,6 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary': '#28464c',
-        'secondary': '#f8ffeb',
       },
       fontFamily: {
         'anta': [ 'Anta', 'sans-serif' ],
@@ -15,4 +13,7 @@ export default {
   plugins: [
     require( 'daisyui' ),
   ],
+  daisyui: {
+    themes: [ "forest" ],
+  },
 }

@@ -4,9 +4,8 @@
 @tailwind utilities;
 
 .background-pattern {
-  @apply bg-black;
   opacity: 1;
-  background-image: radial-gradient(#f8ffeb 1.55px, #000 1.55px);
+  background-image: radial-gradient(#f8ffeb 1.55px, #120d0d 1.55px);
   background-size: 16px 16px;
 }
 
@@ -15,11 +14,7 @@ body {
 }
 
 main {
-  @apply w-full p-8 h-full  flex flex-grow flex-col bg-black;
-}
-
-* {
-  @apply text-secondary;
+  @apply w-full p-8 h-full  flex flex-grow flex-col bg-base-300;
 }
 
 .gradient-header {
