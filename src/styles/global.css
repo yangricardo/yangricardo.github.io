@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-gradient-to-br from-[hsl(181,100%,33%)] to-[hsl(341,100%,41%)] w-full min-h-screen flex flex-col h-max p-1 relative;
+    @apply bg-gradient-to-b from-[hsl(181,100%,33%)] via-[hsl(181,100%,33%)] to-[hsl(98,29%,52%)] w-full min-h-screen flex flex-col h-max p-1 relative;
   }
 
   .shell-container {
@@ -13,10 +13,9 @@
 
   .gradient-header {
     background: linear-gradient(
-      to right bottom,
+      to bottom,
       hsl(181, 100%, 33%),
-      hsl(98, 29%, 52%),
-      hsl(341, 100%, 41%)
+      hsl(98, 29%, 52%)
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -55,6 +54,6 @@
   }
 
   article > p > a {
-    @apply text-cyan-400 underline underline-offset-4 hover:text-red-400 transition-all duration-200;
+    @apply text-cyan-400 underline underline-offset-4 hover:text-green-400 transition-all duration-200;
   }
 }
