@@ -4,24 +4,20 @@
   "frontMatter.preview.host": "http://localhost:4321",
   "frontMatter.content.publicFolder": "public",
   "frontMatter.sponsors.ai.enabled": true,
-  "frontMatter.content.supportedFileTypes": [
-    "md",
-    "mdx",
-    "markdown",
-    "mdoc"
-  ],
+  "frontMatter.content.supportedFileTypes": ["md", "mdx", "markdown", "mdoc"],
   "frontMatter.content.pageFolders": [
     {
       "title": "blog",
       "path": "[[workspace]]/src/content/blog",
-      "previewPath": "'blog'"
+      "previewPath": "blog"
     }
   ],
+  "fileType": "mdoc",
   "frontMatter.taxonomy.contentTypes": [
     {
       "name": "default",
       "pageBundle": false,
-      "previewPath": "'blog'",
+      "previewPath": "blog",
       "filePrefix": null,
       "clearEmpty": true,
       "fields": [
@@ -48,6 +44,16 @@
           "name": "heroImage",
           "type": "image",
           "isPreviewImage": true
+        },
+        {
+          "title": "layout",
+          "name": "layout",
+          "type": "string"
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string"
         }
       ]
     }
