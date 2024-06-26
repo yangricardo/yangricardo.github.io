@@ -1,4 +1,5 @@
 ---
+layout: ../../components/BlogPostLayout.astro
 title: Starting with Astro and FrontMatter blog
 pubDate: 2024-06-26T15:29:19.360Z
 type: default

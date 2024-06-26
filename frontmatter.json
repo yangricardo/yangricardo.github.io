@@ -4,11 +4,17 @@
   "frontMatter.preview.host": "http://localhost:4321",
   "frontMatter.content.publicFolder": "public",
   "frontMatter.sponsors.ai.enabled": true,
-  "frontMatter.content.supportedFileTypes": ["md", "mdx", "markdown", "mdoc"],
+  "frontMatter.content.supportedFileTypes": [
+    "md",
+    "mdx",
+    "markdown",
+    "mdoc"
+  ],
   "frontMatter.content.pageFolders": [
     {
       "title": "blog",
-      "path": "[[workspace]]/src/content/blog"
+      "path": "[[workspace]]/src/content/blog",
+      "previewPath": "'blog'"
     }
   ],
   "frontMatter.taxonomy.contentTypes": [
@@ -45,5 +51,7 @@
         }
       ]
     }
-  ]
+  ],
+  "frontMatter.website.host": "https://yang.dev.br",
+  "frontMatter.git.enabled": true
 }
