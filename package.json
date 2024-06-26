@@ -20,9 +20,12 @@
   "packageManager": "yarn@1.22.2",
   "devDependencies": {
     "@typescript-eslint/parser": "^7.14.1",
+    "autoprefixer": "^10.4.19",
     "eslint": "^9.5.0",
     "eslint-plugin-astro": "^1.2.2",
     "eslint-plugin-jsx-a11y": "^6.9.0",
+    "postcss-import": "^16.1.0",
+    "postcss-nesting": "^12.1.5",
     "prettier": "^3.3.2",
     "prettier-plugin-astro": "^0.14.0"
   }
