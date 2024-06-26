@@ -7,7 +7,7 @@ export default {
       },
       fontFamily: {
         'anta': [ 'Anta', 'sans-serif' ],
-      }
+      },
     },
   },
   plugins: [
