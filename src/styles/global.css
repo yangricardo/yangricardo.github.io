@@ -1,15 +1,14 @@
-/* The integration's default injected base.css file */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply bg-gradient-to-br from-[#e5bd36ff] to-[#009092ff]  w-full min-h-screen flex flex-col h-max p-1 relative overflow-hidden;
+    @apply bg-gradient-to-br from-[#e5bd36ff] to-[#009092ff] w-full min-h-screen flex flex-col h-max p-1 relative overflow-hidden;
   }
 
-  main {
-    @apply w-full p-4 h-full  flex flex-grow flex-col bg-base-300 rounded-xl;
+  .shell-container {
+    @apply w-full p-4 h-full flex flex-grow flex-col bg-base-300 rounded-xl;
   }
 
   .gradient-header {
