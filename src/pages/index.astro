@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import YangDevBRLogo from '../components/header/YangDevBrLogo.astro';
+import ProfilePhoto from '../components/header/ProfilePhoto.astro';
 ---
 
 <html lang='en'>
@@ -19,8 +20,9 @@ import YangDevBRLogo from '../components/header/YangDevBrLogo.astro';
   </head>
   <body>
     <main>
-      <nav>
-        <YangDevBRLogo/>
+      <nav class="w-full grid grid-flow-col gap-2">
+        <YangDevBRLogo />
+        <ProfilePhoto/>
       </nav>
     </main>
   </body>
