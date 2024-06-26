@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import YangDevBRLogo from '../components/header/YangDevBrLogo.astro';
 ---
 
 <html lang='en'>
@@ -18,17 +19,8 @@ import '../styles/global.css';
   </head>
   <body>
     <main>
-      <nav class='w-full space-x-3 flex justify-start items-center'>
-        <a href='/' class='text-secondary'>
-          <img
-            src='/logo.webp'
-            alt='Yang DevBR | Logo'
-            class='w-16 h-16'
-          />
-        </a>
-        <h1 class='text-2xl font-anta gradient-header'>
-          Yang<br />DevBR
-        </h1>
+      <nav>
+        <YangDevBRLogo/>
       </nav>
     </main>
   </body>
