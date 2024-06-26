@@ -6,16 +6,24 @@ import '../styles/global.css';
   <head>
     <meta charset='utf-8' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Anta&display=swap'
+      rel='stylesheet'
+    />
     <meta name='viewport' content='width=device-width' />
     <meta name='generator' content={Astro.generator} />
     <title>Yang DevBR</title>
   </head>
   <body>
     <main>
-      <h1 class='text-secondary'>Astro</h1>
-      <h1 class='text-secondary'>Astro</h1>
-      <h1 class='text-secondary'>Astro</h1>
-      <h1 class='text-secondary'>Astro</h1>
+      <nav class='w-full space-x-6 flex justify-start items-center'>
+        <a href='/' class='text-secondary'>
+          <img src='/logo.webp' alt='Yang DevBR | Logo' class='w-24 h-24' />
+        </a>
+        <h1 class='text-5xl font-anta gradient-header'>Yang<br/>DevBR</h1>
+      </nav>
     </main>
   </body>
 </html>

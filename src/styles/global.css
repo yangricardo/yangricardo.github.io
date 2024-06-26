@@ -4,9 +4,9 @@
 @tailwind utilities;
 
 .background-pattern {
-  @apply bg-primary;
+  @apply bg-black;
   opacity: 1;
-  background-image: radial-gradient(#f8ffeb 1.55px, #28464c 1.55px);
+  background-image: radial-gradient(#f8ffeb 1.55px, #000 1.55px);
   background-size: 16px 16px;
 }
 
@@ -15,5 +15,15 @@ body {
 }
 
 main {
-  @apply w-full p-12 h-full  flex flex-grow flex-col bg-primary;
+  @apply w-full p-12 h-full  flex flex-grow flex-col bg-black;
+}
+
+* {
+  @apply text-secondary;
+}
+
+.gradient-header {
+  background: linear-gradient(to right bottom, #e5bd36ff, #abb24d, #009092ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
