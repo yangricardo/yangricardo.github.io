@@ -1,32 +1,7 @@
 ---
 import { Icon } from 'astro-icon/components';
-// Import necessary modules
-import fs from 'fs';
-import path from 'path';
-// Define the path to the blog directory
-const blogDir = path.resolve('src/pages/blog');
-
-// Read the files in the blog directory
-const blogFiles = fs
-  .readdirSync(blogDir)
-  .filter((file) => file.endsWith('.md') || file.endsWith('.mdx'));
-
-// Function to get blog metadata (e.g., title)
-const getBlogMetadata = (file: string) => {
-  console.log(file);
-  const filePath = path.join(blogDir, file);
-  const content = fs.readFileSync(filePath, 'utf-8');
-  const titleMatch = content.match(/title:\s*(.+)/);
-  const pubDateMatch = content.match(/pubDate:\s*(.+)/);
-  return {
-    title: titleMatch ? titleMatch[1] : file,
-    slug: file.replace(/\.mdx?$/, ''),
-    pubDate: pubDateMatch ? pubDateMatch[1] : '',
-  };
-};
-
-// Get metadata for each blog file
-const blogPosts = blogFiles.map(getBlogMetadata);
+import { getCollection } from 'astro:content';
+const blogPosts = await getCollection('blog');
 ---
 
 <section>
@@ -43,9 +18,9 @@ const blogPosts = blogFiles.map(getBlogMetadata);
           >
             <Icon name='chat-bubble' />
             <span>
-            <span class='group-hover:gradient-header'>{post.title} </span>
-            <br />
-            <span class='text-xs'>{post.pubDate}</span>
+              <span class='group-hover:gradient-header'>{post.slug} </span>
+              <br />
+              
             </span>
           </a>
         </li>
