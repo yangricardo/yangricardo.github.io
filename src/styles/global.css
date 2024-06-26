@@ -4,16 +4,52 @@
 
 @layer base {
   body {
-    @apply bg-gradient-to-br from-[#e5bd36ff] to-[#009092ff] w-full min-h-screen flex flex-col h-max p-1 relative overflow-hidden;
+    @apply bg-gradient-to-br from-[#e5bd36ff] to-[#009092ff] w-full min-h-screen flex flex-col h-max p-1 relative;
   }
 
   .shell-container {
-    @apply w-full p-4 h-full flex flex-grow flex-col bg-base-300 rounded-xl;
+    @apply w-full p-4 flex flex-grow flex-col bg-base-300 rounded-xl overflow-auto;
   }
 
   .gradient-header {
     background: linear-gradient(to right bottom, #e5bd36ff, #abb24d, #009092ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  article {
+    @apply w-full min-h-[0] flex flex-col flex-grow break-words text-justify;
+  }
+
+  article > h1 {
+    @apply text-2xl font-anta my-4;
+  }
+
+  article > h2 {
+    @apply text-xl font-anta my-4;
+  }
+
+  article > p {
+    @apply text-base mb-3;
+  }
+
+  article > ol {
+    @apply list-decimal list-inside pl-5 mb-4;
+  }
+
+  article > ol > li {
+    @apply mb-2;
+  }
+
+  article > ul {
+    @apply list-disc list-inside pl-5 mb-4;
+  }
+
+  article > ul > li {
+    @apply mb-2;
+  }
+
+  article > p > a {
+    @apply text-green-600 underline underline-offset-4 hover:text-yellow-400 transition-all duration-200;
   }
 }

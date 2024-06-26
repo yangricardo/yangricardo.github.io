@@ -19,8 +19,8 @@ import ProfilePhoto from './header/ProfilePhoto.astro';
     <title>Yang DevBR</title>
   </head>
   <body>
-    <div class="shell-container">
-      <nav class='navbar'>
+    <div class='shell-container'>
+      <nav class='navbar sticky top-0 z-50'>
         <ul class='w-full grid grid-cols-1 sm:grid-cols-2 gap-4'>
           <li class='flex flex-col justify-start items-center'>
             <YangDevBRLogo />
@@ -30,8 +30,8 @@ import ProfilePhoto from './header/ProfilePhoto.astro';
           </li>
         </ul>
       </nav>
-      <main class="w-full flex flex-col p-4">
-        <slot/>
+      <main class='w-full flex flex-col p-4'>
+        <slot />
       </main>
     </div>
   </body>
