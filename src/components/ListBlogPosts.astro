@@ -10,21 +10,34 @@ const blogPosts = await getCollection('blog');
   </h2>
   <ul>
     {
-      blogPosts.map((post) => (
-        <li class='ml-4 hover:ml-12 hover:scale-105 duration-200 group'>
-          <a
-            class='flex space-x-2 justify-start items-center'
-            href={`/blog/${post.slug}`}
-          >
-            <Icon name='chat-bubble' />
-            <span>
-              <span class='group-hover:gradient-header'>{post.slug} </span>
-              <br />
-              
-            </span>
-          </a>
-        </li>
-      ))
+      blogPosts.map((post) => {
+        const pubDate = new Date(Date.parse(post.data.pubDate));
+        const date = pubDate.toLocaleDateString(undefined, {
+          dateStyle: 'full',
+        });
+        const time = pubDate.toLocaleTimeString(undefined, {
+          timeZoneName: 'short',
+        });
+        return (
+          <li class='ml-4 hover:ml-12 hover:scale-105 duration-200 group'>
+            <a
+              class='flex space-x-2 justify-start items-center'
+              href={`/blog/${post.slug}`}
+            >
+              <Icon name='chat-bubble' />
+              <span>
+                <span class='group-hover:gradient-header'>
+                  {post.data.title}{' '}
+                </span>
+                <br />
+                <span class='group-hover:gradient-header text-xs'>
+                  {date}{' - '}{time}
+                </span>
+              </span>
+            </a>
+          </li>
+        );
+      })
     }
   </ul>
 </section>
