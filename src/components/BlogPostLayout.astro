@@ -3,19 +3,22 @@ import BaseLayout from './BaseLayout.astro';
 
 
 const { frontmatter } = Astro.props;
+const pubDate = new Date(Date.parse(frontmatter.pubDate));
+const date = pubDate.toLocaleDateString(undefined,{dateStyle:'full'});
+const time = pubDate.toLocaleTimeString(undefined,{timeZoneName: 'short'});
 ---
 
 <BaseLayout>
-  <section class='mockup-window bg-base-300 border-2 border-cyan-400 my-8 mb-4'>
+  <section class='mockup-window bg-base-300 border-2 font-mono border-cyan-400 my-8 mb-4'>
     <div class='bg-base-200 flex flex-col justify-start space-y-2 p-4'>
       <h1 class='text-2xl font-anta'>{frontmatter.title}</h1>
       <h2 class='text-lg'>{frontmatter.description}</h2>
       <p class='text-sm'>
-        Published At: {frontmatter.pubDate}
+        Published At: {date} {time}
       </p>
     </div>
   </section>  
-  <article class="p-4">
+  <article class="p-4 font-mono  ">
     <slot/>
   </article>
 </BaseLayout>

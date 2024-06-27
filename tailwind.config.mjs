@@ -9,6 +9,7 @@ export default {
         'anta': [ 'Anta', 'sans-serif' ],
         'sans': [ 'Saira', 'sans-serif' ],
         'serif': [ 'Trirong', 'serif' ],
+        'mono': [ 'Fira Code', 'monospace' ],
       },
     },
   },
