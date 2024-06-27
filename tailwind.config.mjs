@@ -8,6 +8,7 @@ export default {
       fontFamily: {
         'anta': [ 'Anta', 'sans-serif' ],
         'sans': [ 'Saira', 'sans-serif' ],
+        'serif': [ 'Trirong', 'serif' ],
       },
     },
   },
