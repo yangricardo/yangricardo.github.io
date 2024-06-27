@@ -21,39 +21,30 @@
     -webkit-text-fill-color: transparent;
   }
 
-  article {
-    @apply w-full min-h-[0] flex flex-col flex-grow break-words text-justify;
+  .markdown-article {
+    @apply w-full min-w-full min-h-[0] flex flex-col flex-grow break-words p-4 prose prose-cyan font-mono;
   }
 
-  article > h1 {
-    @apply text-2xl font-anta my-4;
+  .markdown-article h1,
+  .markdown-article h2,
+  .markdown-article h3,
+  .markdown-article h4,
+  .markdown-article h5,
+  .markdown-article h6 {
+    @apply text-cyan-400;
+  }
+  .markdown-article a {
+    @apply text-cyan-400 underline-offset-4;
+    &:hover {
+      @apply text-green-500;
+    }
   }
 
-  article > h2 {
-    @apply text-xl font-anta my-4;
+  .markdown-article p {
+    @apply my-2 text-base;
   }
 
-  article > p {
-    @apply text-base mb-3;
-  }
-
-  article > ol {
-    @apply list-decimal list-inside pl-5 mb-4;
-  }
-
-  article > ol > li {
-    @apply mb-2;
-  }
-
-  article > ul {
-    @apply list-disc list-inside pl-5 mb-4;
-  }
-
-  article > ul > li {
-    @apply mb-2;
-  }
-
-  article > p > a {
-    @apply text-cyan-400 underline underline-offset-4 hover:text-green-400 transition-all duration-200;
+  .markdown-article li {
+    @apply ml-4;
   }
 }
