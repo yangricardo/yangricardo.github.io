@@ -1,9 +1,29 @@
 ---
-import BaseLayout from '../components/BaseLayout.astro';
-import ListBlogPosts from '../components/ListBlogPosts.astro';
+import BaseLayout from "../components/BaseLayout.astro";
+import ListBlogPosts from "../components/ListBlogPosts.astro";
 ---
 
 <BaseLayout>
-  Hello, World!
-  <ListBlogPosts/>
+  <header class="mb-16 group">
+    <h1 class="mb-1 font-anta text-4xl text-gray-100 md:text-6xl">
+      Hello World, I'm <br class="block md:hidden" />
+      <span
+        class="inline-flex h-20 pt-2 overflow-x-hidden animate-type group-hover:animate-type-reverse whitespace-nowrap text-brand-accent will-change-transform"
+      >
+        Yang 👋
+      </span>
+      <span
+        class="box-border inline-block w-1 h-10 ml-2 -mb-2 bg-white md:-mb-4 md:h-16 animate-cursor will-change-transform"
+      ></span>
+    </h1>
+    <div class="text-xl font-anta font-semibold md:text-3xl">
+      Pionering FullStack <strong class="text-cyan-600">Blockchain</strong> solutions
+      at <strong class="text-cyan-600">Ecoa Puc-Rio</strong> for the Oil and Gas
+      sector fulltime and part-time offering developmment consultancy for <strong
+        class="text-cyan-600">Play For A Cause</strong
+      > new e-Commerce platform
+    </div>
+  </header>
+
+  <ListBlogPosts />
 </BaseLayout>

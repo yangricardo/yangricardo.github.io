@@ -1,37 +1,36 @@
 ---
-import { Icon } from 'astro-icon/components';
-import { getCollection } from 'astro:content';
-const blogPosts = await getCollection('blog');
+import { Icon } from "astro-icon/components";
+import { getCollection } from "astro:content";
+const blogPosts = await getCollection("blog");
 ---
 
-<section>
-  <h2 class='text-2xl font-anta my-4 gradient-header'>
-    Check some of my knowledge sharing
+<section class="w-full flex flex-col">
+  <h2 class="text-2xl font-anta my-4 gradient-header">
+    Check out some of my Knowledge Pills
   </h2>
-  <ul>
+  <ul class="w-full flex flex-col">
     {
       blogPosts.map((post) => {
         const pubDate = new Date(Date.parse(post.data.pubDate));
         const date = pubDate.toLocaleDateString(undefined, {
-          dateStyle: 'full',
+          dateStyle: "full",
         });
         const time = pubDate.toLocaleTimeString(undefined, {
-          timeZoneName: 'short',
+          timeZoneName: "short",
         });
         return (
-          <li class='ml-4 hover:ml-12 hover:scale-105 duration-200 group'>
+          <li class="ml-4 hover:ml-8 duration-200 hover:text-cyan-500">
             <a
-              class='flex space-x-2 justify-start items-center'
+              class="flex space-x-2 justify-start items-center"
               href={`/blog/${post.slug}`}
             >
-              <Icon name='chat-bubble' />
-              <span>
-                <span class='group-hover:gradient-header'>
-                  {post.data.title}{' '}
-                </span>
-                <br />
-                <span class='group-hover:gradient-header text-xs'>
-                  {date}{' - '}{time}
+              <Icon name="chat-bubble" />
+              <span class="flex flex-col justify-start items-start">
+                <span>{post.data.title} </span>
+                <span class="text-xs">
+                  {date}
+                  {" - "}
+                  {time}
                 </span>
               </span>
             </a>
