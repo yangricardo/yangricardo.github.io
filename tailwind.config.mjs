@@ -12,7 +12,7 @@ export default {
         'mono': [ 'Fira Code', 'monospace' ],
       },
       animation: {
-        type: 'type 2.7s ease-out .8s infinite alternate both',
+        type: 'type 4s ease-in-out .12s infinite alternate both',
       },
       keyframes: {
         type: {
