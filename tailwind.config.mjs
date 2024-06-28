@@ -13,6 +13,7 @@ export default {
       },
       animation: {
         type: 'type 4s ease-in-out .12s infinite alternate both',
+        'slow-spin': 'slow-spin 7s linear infinite',
       },
       keyframes: {
         type: {
@@ -27,6 +28,11 @@ export default {
           '75%, 80%': { width: '8ch' },
           '85%, 90%': { width: '9ch' },
           '95%': { width: '10ch' },
+        },
+        'slow-spin': {
+          '0%': { transform: 'rotate(0deg)' },
+          '50%': { transform: 'rotate(180deg)' },
+          '100%': { transform: 'rotate(360deg)' },
         },
       },
 
