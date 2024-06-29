@@ -12,6 +12,9 @@ const time = pubDate.toLocaleTimeString(undefined, { timeZoneName: "short" });
     class="mockup-window bg-base-300 border-2 font-mono border-cyan-400 my-8 mb-4"
   >
     <div class="bg-cyan-950 flex flex-col justify-start space-y-2 p-4">
+      <h1 class="text-lg font-anta">
+        {frontmatter.description}
+      </h1>
       <p class="text-sm">
         Last Updated At: {date}
         {time}
