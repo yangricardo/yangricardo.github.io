@@ -12,5 +12,7 @@ export default defineConfig( {
   integrations: [ tailwind( {
     applyBaseStyles: false,
     nesting: true
-  } ), icon(), mdx(), markdoc(), sitemap() ]
+  } ), icon( {
+    iconDir: '/public/icons'
+  } ), mdx(), markdoc(), sitemap() ]
 } );
