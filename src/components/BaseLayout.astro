@@ -1,8 +1,7 @@
 ---
 import "../styles/global.css";
-import YangDevBRLogo from "./header/YangDevBrLogo.astro";
-import ProfilePhoto from "./header/ProfilePhoto.astro";
 import Footer from "./footer.astro";
+import Header from "./header/Header.astro";
 
 const {
   title = "Yang DevBR | Yang Ricardo Barcellos Miranda",
@@ -39,6 +38,8 @@ const {
   ].join(", "),
   lang = "en",
   charset = "utf-8",
+  header = true,
+  footer = true,
 } = Astro.props;
 ---
 
@@ -189,22 +190,11 @@ const {
   </head>
   <body>
     <div class="shell-container">
-      <nav
-        class="navbar sticky top-0 z-50 circuit-background-pattern w-full p-2 bg-base-300 transition-all duration-500 ease-in-out"
-      >
-        <ul class="w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <li class="flex flex-col justify-start items-center">
-            <YangDevBRLogo />
-          </li>
-          <li class="flex flex-col justify-end items-center">
-            <ProfilePhoto />
-          </li>
-        </ul>
-      </nav>
+      {header && <Header />}
       <main class="w-full flex flex-col flex-grow p-4">
         <slot />
       </main>
-      <Footer />
+      {footer && <Footer />}
     </div>
   </body>
 </html>
