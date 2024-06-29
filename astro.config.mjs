@@ -13,6 +13,6 @@ export default defineConfig( {
     applyBaseStyles: false,
     nesting: true
   } ), icon( {
-    iconDir: '/public/icons'
+    iconDir: 'public/icons'
   } ), mdx(), markdoc(), sitemap() ]
 } );
