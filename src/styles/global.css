@@ -73,4 +73,11 @@
       opacity: 0;
     }
   }
+
+  .link {
+    @apply text-cyan-400 underline-offset-4;
+    &:hover {
+      @apply text-green-500;
+    }
+  }
 }
