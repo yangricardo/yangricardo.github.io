@@ -1,0 +1,210 @@
+---
+import "../styles/global.css";
+
+const {
+  title = "Yang DevBR | Yang Ricardo Barcellos Miranda",
+  description = "Professional profile and blog of Yang Miranda",
+  keywords = [
+    "Software Development",
+    "ReactJS",
+    "NextJS",
+    "Astro",
+    "Typescript",
+    "NestJS",
+    "Express",
+    "Strapi CMS",
+    "KeystoneCMS",
+    "TailwindCSS",
+    "Java",
+    "Spring Boot",
+    "Quarkus",
+    "Docker",
+    "Docker Compose",
+    "Hyperledger Fabric",
+    "Hyperledger Besu",
+    "Chaincode",
+    "Solidity",
+    "Ethers",
+    "Traefik",
+    "Systems Integration",
+    "ECOA PUC-Rio",
+    "PUC-Rio",
+    "Play For A Cause",
+    "Petrobras",
+    "PUCRS",
+    "MBA",
+  ].join(", "),
+  lang = "en",
+  charset = "utf-8",
+  header = true,
+  footer = true,
+} = Astro.props;
+---
+
+<html lang={lang}>
+  <head>
+    <meta charset={charset} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Preload fonts -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Anta&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      crossorigin="anonymous"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
+    <meta name="msvalidate.01" content="C6F3A717BF8EED8F6AB7F0F59243EF7E" />
+    <!-- Security Headers -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' https://*.linkedin.com/; img-src 'self' data: https://media.licdn.com; script-src 'self' 'unsafe-inline' https://platform.linkedin.com https://badges.linkedin.com; style-src 'self' 'unsafe-inline' http://fonts.googleapis.com https://use.typekit.net https://static.licdn.com; font-src 'self' http://fonts.googleapis.com https://use.typekit.net https://fonts.gstatic.com data:;"
+    />
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta
+      http-equiv="Strict-Transport-Security"
+      content="max-age=31536000; includeSubDomains; preload"
+    />
+
+    <!-- SEO Tags -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="og:url" content={Astro.site} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/twitter-image.png" />
+    <!-- Schema Markup -->
+    <script is:inline type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Yang Ricardo Barcellos Miranda",
+        "url": "{Astro.site}",
+        "sameAs": [
+          "https://www.linkedin.com/in/yangricardo/",
+          "https://github.com/yangricardo",
+          "https://orcid.org/0000-0002-7414-1899",
+          "http://lattes.cnpq.br/5994507296564728"
+        ],
+        "jobTitle": "Software Developer",
+        "worksFor": [
+          {
+            "@type": "Organization",
+            "name": "Yang DevBR",
+            "alternateName": "Yang DevBR",
+            "url": "https://yang.dev.br"
+          },
+          {
+            "@type": "Organization",
+            "name": "ECOA PUC-Rio",
+            "alternateName": "ECOA PUC-Rio",
+            "url": "https://instituto.ecoa.puc-rio.br/"
+          },
+          {
+            "@type": "Organization",
+            "name": "Play For A Cause",
+            "alternateName": "Play For A Cause",
+            "url": "https://play.foracause.com.br/"
+          },
+          {
+            "@type": "Organization",
+            "name": "Petrobras",
+            "alternateName": "Petrobras",
+            "url": "https://petrobras.com.br"
+          },
+          {
+            "@type": "Organization",
+            "name": "PUCRS",
+            "alternateName": "PUCRS",
+            "url": "https://pucrs.br"
+          }
+        ],
+        "description": [
+          {
+            "@value": "Professional profile and blog of Yang Miranda",
+            "@language": "en"
+          },
+          {
+            "@value": "Perfil profissional e blog de Yang Miranda",
+            "@language": "pt"
+          }
+        ]
+      }
+    </script>
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Anta&display=swap"
+        crossorigin="anonymous"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap"
+        crossorigin="anonymous"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        crossorigin="anonymous"
+      />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Trirong:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        crossorigin="anonymous"
+      />
+    </noscript>
+    <script
+      src="https://platform.linkedin.com/badges/js/profile.js"
+      async
+      defer
+      type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="shell-container">
+      <div class="m-auto w-full flex flex-col justify-center items-center">
+        <a class="flex flex-row space-x-12" href="/">
+          <img
+            src="/favicon.svg"
+            alt="Yang DevBR | Logo"
+            class="w-72 h-72 group-hover:rotate-180 group-hover:scale-125 group-hover:mr-2 transition-all duration-500 select-none pointer-events-none"
+          />
+          <strong class="text-9xl font-anta gradient-header">
+            Yang<br />DevBR
+          </strong>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
