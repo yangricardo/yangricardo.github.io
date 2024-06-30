@@ -2,9 +2,9 @@
 
 ---
 
-<div class="flex justify-center items-center">
+<div class="w-full flex justify-center items-center">
   <div
-    class="badge-base LI-profile-badge w-full max-w-lg rounded-3xl p-8 circuit-background-pattern bg-base-300 relative overflow-hidden"
+    class="badge-base LI-profile-badge relative bg-transparent"
     data-locale="pt_BR"
     data-size="medium"
     data-theme="dark"
@@ -15,16 +15,11 @@
     <!-- Clickable area -->
     <a
       href="https://br.linkedin.com/in/yangricardo?trk=profile-badge"
-      class="absolute inset-0 z-10 max-w-72"
-      style="cursor: pointer; text-decoration: none;"
+      class="absolute inset-0 z-0 cursor-pointer w-full flex flex-col justify-center items-center"
     >
-      <span class="sr-only">LinkedIn Profile</span>
-    </a>
-
-    <!-- Content below the clickable area -->
-    <div class="relative z-20">
-      <span class="badge-base__link LI-simple-link" style="cursor: pointer;"
+      <span
+        class="relative z-10 w-full flex flex-col justify-center items-center badge-base__link LI-simple-link"
       ></span>
-    </div>
+    </a>
   </div>
 </div>
